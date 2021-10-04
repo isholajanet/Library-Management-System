@@ -1,6 +1,8 @@
 package repositories;
 
 import entities.Book;
+import entities.User;
+import enums.UserType;
 import exceptions.BookNotFoundException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,10 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryDbTest {
     private LibraryDb bookDatabase;
+    private UserDb userDb;
 
     @BeforeEach
     void setUp() {
         bookDatabase = new LibraryDb();
+        userDb = new UserDb();
 
     }
 
@@ -55,5 +59,11 @@ class LibraryDbTest {
         } catch (BookNotFoundException e) {
             e.getLocalizedMessage();
         }
+    }
+    @Test
+    void testThatARegisteredUserCanSearchForBook(){
+        User newUser = new User("jane", "jane12", UserType.STUDENT);
+
+
     }
 }

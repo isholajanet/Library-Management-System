@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LibraryDb {
-    private List<Book> bookDatabase = new ArrayList<Book>();
+    private final List<Book> bookDatabase = new ArrayList<Book>();
 
 
 
@@ -34,4 +34,8 @@ public class LibraryDb {
         }
         return foundedBook;
     }
+    public Boolean contains(Book book){
+        return bookDatabase.contains(book);
+    }
+
 }

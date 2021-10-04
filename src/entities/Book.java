@@ -4,6 +4,7 @@ public class Book {
     private String title;
     private String author;
     private String ISBN;
+    private String feedbacks;
     private boolean reservationSystem;
 
     public Book(String title, String author, String ISBN) {
@@ -42,5 +43,13 @@ public class Book {
 
     public void setReservationSystem(boolean reservationSystem) {
         this.reservationSystem = reservationSystem;
+    }
+
+    public String getFeedbacks() {
+        return feedbacks;
+    }
+
+    public void setFeedbacks(String feedbacks) {
+        this.feedbacks = feedbacks;
     }
 }

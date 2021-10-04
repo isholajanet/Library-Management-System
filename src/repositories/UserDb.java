@@ -11,6 +11,10 @@ public class UserDb {
     private final List<User> userDatabase = new ArrayList<User>();
     private Account account;
 
+    public boolean contains(User user){
+        return userDatabase.contains(user);
+    }
+
     public void addUser(User user){
         userDatabase.add(user);
     }
@@ -57,4 +61,5 @@ public class UserDb {
         }
         userDatabase.remove(user);
     }
+
 }
